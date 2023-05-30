@@ -19,6 +19,11 @@ return {
   --   end,
   -- },
   {
+    "edgedb/edgedb-vim",
+    event = "BufRead",
+    -- config = function() require("tsc").setup() end,
+  },
+  {
     "tpope/vim-surround",
     lazy = false,
   },
