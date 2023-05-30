@@ -57,30 +57,31 @@ return {
   --     luasnip.filetype_extend("javascript", { "javascriptreact" })
   --   end,
   -- },
-  {
-    "NvChad/nvim-colorizer.lua",
-    config = function(plugin, opts)
-      -- require "plugins.configs.colorizer"(plugin, opts) -- include the default astronvim config that calls the setup call
-      -- add more custom luasnip configuration such as filetype extend or custom snippets
-      local colorizer = require "colorizer"
-      -- colorizer.filetype_extend("javascript", { "javascriptreact" })
-      colorizer.setup {
-        filetypes = { "scss", "sass", "css", "javascript", "lua", "vim", "toml", "svelte", "typescript" },
-        user_default_options = {
-          RGB = true, -- #RGB hex codes
-          RRGGBB = true, -- #RRGGBB hex codes
-          names = false, -- "Name" codes like Blue oe blue
-          RRGGBBAA = true, -- #RRGGBBAA hex codes
-          rgb_fn = true, -- CSS rgb() and rgba() functions rgb(255,0,0)
-          hsl_fn = true, -- CSS hsl() and hsla() functions
-          css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
-          css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
-          -- Available modes: foreground, background, virtualtext
-          mode = "background", -- Set the display mode.)
-        },
-      }
-    end,
-  },
+  -- {
+  --   "NvChad/nvim-colorizer.lua",
+  --   config = function(plugin, opts)
+  --     -- require "plugins.configs.colorizer"(plugin, opts) -- include the default astronvim config that calls the setup call
+  --     -- add more custom luasnip configuration such as filetype extend or custom snippets
+  --     local colorizer = require "colorizer"
+  --     colorizer.setup {
+  --       filetypes = { "scss", "sass", "css", "javascript", "lua", "vim", "toml", "svelte", "typescript", "javascriptreact", "typescriptreact" },
+  --       user_default_options = {
+  --         RGB = true, -- #RGB hex codes
+  --         RRGGBB = true, -- #RRGGBB hex codes
+  --         names = false, -- "Name" codes like Blue oe blue
+  --         RRGGBBAA = true, -- #RRGGBBAA hex codes
+  --         rgb_fn = true, -- CSS rgb() and rgba() functions rgb(255,0,0)
+  --         hsl_fn = true, -- CSS hsl() and hsla() functions
+  --         css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
+  --         css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
+  --         -- Available modes: foreground, background, virtualtext
+  --         mode = "background", -- Set the display mode.)
+  --       },
+  --     }
+  --     -- colorizer.filetype_extend("javascript", { "javascriptreact" })
+  --     -- colorizer.filetype_extend("typescript", { "typescriptreact" })
+  --   end,
+  -- },
   -- {
   --   "windwp/nvim-autopairs",
   --   config = function(plugin, opts)

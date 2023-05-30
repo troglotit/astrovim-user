@@ -48,19 +48,13 @@ return {
     event = "BufRead",
     config = function() require("lsp_signature").setup() end,
   },
-  {
-    "TimUntersberger/neogit",
-    lazy = false,
-    config = function()
-      require("neogit").setup()
-      -- vim.keymap.set({ 'n', 'x', 'o' }, 'f', function()
-      --     leap.leap {
-      --         target_windows = target_windows,
-      --         inclusive_op = false,
-      --     }
-      -- end)
-    end,
-  },
+  -- {
+  --   "TimUntersberger/neogit",
+  --   lazy = false,
+  --   config = function()
+  --     require("neogit").setup()
+  --   end,
+  -- },
   {
     "ggandor/leap.nvim",
     lazy = false,
@@ -80,10 +74,6 @@ return {
           }
         end
       )
-      -- vim.keymap.set({"n", "x", "o"}, "f", function ()
-      --   local current_window = vim.fn.win_getid()
-      --   require("leap").leap { target_window = { current_window } }
-      -- end)
     end,
   },
 }
