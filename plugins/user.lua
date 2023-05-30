@@ -7,6 +7,17 @@ return {
     event = "BufRead",
     config = function() require("tsc").setup() end,
   },
+  { "ellisonleao/gruvbox.nvim", priority = 1000, config = function() require("gruvbox").setup {} end },
+  -- {
+  --   "akinsho/bufferline.nvim",
+  --   version = "*",
+  --   event = "BufRead",
+  --   dependencies = "nvim-tree/nvim-web-devicons",
+  --   config = function()
+  --     vim.opt.termguicolors = true
+  --     require("bufferline").setup()
+  --   end,
+  -- },
   {
     "tpope/vim-surround",
     lazy = false,
