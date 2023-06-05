@@ -76,4 +76,14 @@ return {
       )
     end,
   },
+  {
+    "TimUntersberger/neogit",
+    dependencies = {
+      { "nvim-lua/plenary.nvim" },
+    },
+    event = "User AstroGitFile",
+    keys = {
+      { "<leader>gn", "<cmd>Neogit<CR>", desc = "Open Neogit Tab Page" },
+    },
+  },
 }

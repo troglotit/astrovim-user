@@ -11,7 +11,9 @@ return {
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
       function()
-        require("astronvim.utils.status").heirline.buffer_picker(function(bufnr) require("astronvim.utils.buffer").close(bufnr) end)
+        require("astronvim.utils.status").heirline.buffer_picker(
+          function(bufnr) require("astronvim.utils.buffer").close(bufnr) end
+        )
       end,
       desc = "Pick to close",
     },
@@ -22,28 +24,23 @@ return {
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     ["H"] = { ":bprevious<cr>" },
     ["L"] = { ":bnext<cr>" },
-    -- ["<C-j>"] = { "i<Enter><esc>l" },
+    ["<C-j>"] = { "i<Enter><esc>k$" },
+    -- [";"] = { "<cmd>lua require('telescope.builtin').resume(require('telescope.themes').get_ivy({}))<cr>" },
     -- ["<leader>fs"] = { fuction()
     --   vim.opt
     -- end},
     ["<leader>s"] = { name = "Search" },
-    ["<leader>sn"] = { 
+    ["<leader>sn"] = {
       desc = "Search notification",
-      function() 
-        require('telescope').extensions.notify.notify()
-      end,
+      function() require("telescope").extensions.notify.notify() end,
     },
-    ["<leader>ss"] = { 
+    ["<leader>ss"] = {
       desc = "Current buffer fuzzy find",
-      function() 
-        require('telescope.builtin').current_buffer_fuzzy_find { fuzzy = false } 
-      end,
+      function() require("telescope.builtin").current_buffer_fuzzy_find { fuzzy = false } end,
     },
-    ["<leader>se"] = { 
+    ["<leader>se"] = {
       desc = "Current buffer find",
-      function() 
-        require("telescope.builtin").live_grep({search_dirs={vim.fn.expand("%:p")}})
-      end,
+      function() require("telescope.builtin").live_grep { search_dirs = { vim.fn.expand "%:p" } } end,
     },
   },
   t = {
@@ -51,12 +48,12 @@ return {
     -- ["<esc>"] = false,
   },
   i = {
-    ["<C-h>"] = {"<Left>"},
-    ["<C-b>"] = {"<Left>"},
-    ["<C-f>"] = {"<Right>"},
-    ["<C-l>"] = {"<Right>"},
+    ["<C-h>"] = { "<Left>" },
+    ["<C-b>"] = { "<Left>" },
+    ["<C-f>"] = { "<Right>" },
+    ["<C-l>"] = { "<Right>" },
   },
--- vim.api.nvim_set_keymap('v', '<C-f>', 'y<ESC>:Telescope live_grep default_text=<c-r>0<CR>', default_opts)
+  -- vim.api.nvim_set_keymap('v', '<C-f>', 'y<ESC>:Telescope live_grep default_text=<c-r>0<CR>', default_opts)
   -- v = {
   --   ["<leader>fw"] = {
   --     name = "my search",
