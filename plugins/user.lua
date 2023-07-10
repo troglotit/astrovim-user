@@ -77,7 +77,7 @@ return {
     end,
   },
   {
-    "TimUntersberger/neogit",
+    "NeogitOrg/neogit",
     dependencies = {
       { "nvim-lua/plenary.nvim" },
     },
