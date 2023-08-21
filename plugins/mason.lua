@@ -6,6 +6,7 @@ return {
     -- overrides `require("mason-lspconfig").setup(...)`
     opts = {
       ensure_installed = { "lua_ls", "tsserver", "eslint" },
+      -- ensure_installed = {},
     },
   },
   -- use mason-null-ls to configure Formatters/Linter installation for null-ls sources
@@ -14,6 +15,7 @@ return {
     -- overrides `require("mason-null-ls").setup(...)`
     opts = {
       ensure_installed = { "prettierd", "stylua" },
+      -- ensure_installed = {},
     },
   },
   {

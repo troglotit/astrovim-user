@@ -29,11 +29,7 @@ return {
     -- ["<leader>fs"] = { fuction()
     --   vim.opt
     -- end},
-    ["<leader>s"] = { name = "Search" },
-    ["<leader>sn"] = {
-      desc = "Search notification",
-      function() require("telescope").extensions.notify.notify() end,
-    },
+    ["<leader>s"] = { name = "Search and Custom" },
     ["<leader>ss"] = {
       desc = "Current buffer fuzzy find",
       function() require("telescope.builtin").current_buffer_fuzzy_find { fuzzy = false } end,
@@ -42,6 +38,11 @@ return {
       desc = "Current buffer find",
       function() require("telescope.builtin").live_grep { search_dirs = { vim.fn.expand "%:p" } } end,
     },
+    -- keymap.set("n", "<leader>fg", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
+    ["<leader>sg"] = {
+      desc = "Live Grep Args",
+      function() require('telescope-live-grep-args.shortcuts').grep_word_under_cursor() end,
+    }
   },
   t = {
     -- setting a mapping to false will disable it

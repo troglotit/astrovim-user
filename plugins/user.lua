@@ -85,6 +85,17 @@ return {
     keys = {
       { "<leader>gn", "<cmd>Neogit<CR>", desc = "Open Neogit Tab Page" },
     },
+    config = function()
+      require("neogit").setup {
+        mappings = {
+          status = {
+            ["O"] = "ResetPopup",
+            ["F"] = "PullPopup",
+            ["p"] = "PushPopup",
+          },
+        },
+      }
+    end,
   },
   { -- override nvim-cmp plugin
     "hrsh7th/nvim-cmp",
