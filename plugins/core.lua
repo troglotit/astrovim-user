@@ -34,6 +34,13 @@ return {
       return opts
     end,
   },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    opts = function(_, opts)
+      opts.filesystem.filtered_items = { hide_dotfiles = false, hide_hidden = false, hide_git_ignored = false }
+      return opts
+    end,
+  },
   -- You can disable default plugins as follows:
   { "max397574/better-escape.nvim", enabled = false },
   --
