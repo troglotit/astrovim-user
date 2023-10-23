@@ -24,6 +24,7 @@ return {
     "nvim-telescope/telescope.nvim",
     opts = function(_, opts)
       opts.defaults.preview = { treesitter = true }
+      opts.defaults.dynamic_preview_title = true
       return opts
     end,
   },
