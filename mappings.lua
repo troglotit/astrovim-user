@@ -24,6 +24,8 @@ return {
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     ["H"] = { ":bprevious<cr>" },
     ["L"] = { ":bnext<cr>" },
+    -- ["<C-u>"] = { "<C-u>zz" },
+    -- ["<C-d>"] = { "<C-d>zz" },
     ["<C-j>"] = { "i<Enter><esc>k$" },
     -- [";"] = { "<cmd>lua require('telescope.builtin').resume(require('telescope.themes').get_ivy({}))<cr>" },
     -- ["<leader>fs"] = { fuction()
