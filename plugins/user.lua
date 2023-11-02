@@ -88,7 +88,9 @@ return {
     config = function()
       require("neogit").setup {
         mappings = {
-          status = {
+          -- status = {
+          -- },
+          popup = {
             ["O"] = "ResetPopup",
             ["F"] = "PullPopup",
             ["p"] = "PushPopup",

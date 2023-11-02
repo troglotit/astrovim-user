@@ -11,4 +11,5 @@ return {
   { import = "astrocommunity.project.project-nvim", enable = true },
   { import = "astrocommunity.utility.telescope-live-grep-args-nvim", enable = true },
   { import = "astrocommunity.editing-support.nvim-treesitter-endwise", enable = true },
+  -- { import = "astrocommunity.editing-support.auto-save-nvim", enable = true },
 }
