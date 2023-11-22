@@ -161,4 +161,12 @@ return {
       "nvim-lua/plenary.nvim",
     },
   },
+  {
+    "julienvincent/nvim-paredit",
+    config = function() require("nvim-paredit").setup() end,
+  },
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+    config = function() require("treesitter-context").setup() end,
+  },
 }
