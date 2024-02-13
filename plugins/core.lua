@@ -40,7 +40,7 @@ return {
     opts = function(_, opts)
       opts.filesystem.filtered_items = { hide_dotfiles = false, hide_hidden = false, hide_git_ignored = false }
       opts.window = {
-        position = "right",
+        -- position = "right",
       }
       return opts
     end,

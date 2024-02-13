@@ -169,4 +169,9 @@ return {
     "nvim-treesitter/nvim-treesitter-context",
     config = function() require("treesitter-context").setup() end,
   },
+  -- {
+  --   "jghauser/fold-cycle.nvim",
+  --   config = function() require("fold-cycle").setup() end,
+  -- },
+  "arecarn/vim-fold-cycle",
 }

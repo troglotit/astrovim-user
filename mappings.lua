@@ -43,8 +43,24 @@ return {
     -- keymap.set("n", "<leader>fg", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
     ["<leader>sg"] = {
       desc = "Live Grep Args",
-      function() require('telescope-live-grep-args.shortcuts').grep_word_under_cursor() end,
-    }
+      function() require("telescope-live-grep-args.shortcuts").grep_word_under_cursor() end,
+    },
+    -- Fold-cycle.nvim
+    -- ["<tab>"] = {
+    --   silent = true,
+    --   desc = "Fold-cycle: open folds",
+    --   function() return require("fold-cycle").open() end,
+    -- },
+    -- ["<s-tab>"] = {
+    --   silent = true,
+    --   desc = "Fold-cycle: close folds",
+    --   function() return require("fold-cycle").close() end,
+    -- },
+    -- ["zC"] = {
+    --   silent = true,
+    --   desc = "Fold-cycle: close folds",
+    --   function() return require("fold-cycle").close_all() end,
+    -- },
   },
   t = {
     -- setting a mapping to false will disable it
