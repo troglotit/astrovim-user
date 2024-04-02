@@ -10,6 +10,9 @@ return {
     foldenable = false,
     foldexpr = "nvim_treesitter#foldexpr()", -- set Treesitter based folding
     foldmethod = "expr",
+    tabstop = 2,
+    shiftwidth = 2,
+    softtabstop = 2,
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader

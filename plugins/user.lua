@@ -161,10 +161,10 @@ return {
       "nvim-lua/plenary.nvim",
     },
   },
-  {
-    "julienvincent/nvim-paredit",
-    config = function() require("nvim-paredit").setup() end,
-  },
+  -- {
+  --   "julienvincent/nvim-paredit",
+  --   config = function() require("nvim-paredit").setup() end,
+  -- },
   {
     "nvim-treesitter/nvim-treesitter-context",
     config = function() require("treesitter-context").setup() end,
@@ -174,4 +174,12 @@ return {
   --   config = function() require("fold-cycle").setup() end,
   -- },
   "arecarn/vim-fold-cycle",
+  {
+    "julienvincent/nvim-paredit",
+    config = function()
+      require("nvim-paredit").setup {
+        use_default_keys = true,
+      }
+    end,
+  },
 }
